@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutomEight™ — Services & Pricing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --g:    #1D9E75;
+  --gd:   #0F6E56;
+  --gdp:  #085041;
+  --gl:   #E1F5EE;
+  --gm:   #b8e8d8;
+  --ink:  #1A1A18;
+  --dim:  #5A5A56;
+  --faint:#8E8E89;
+  --bg:   #F6F6F2;
+  --card: #FFFFFF;
+  --line: rgba(26,26,24,0.09);
+  --line2:rgba(26,26,24,0.16);
+  --r:    10px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 60px;
+  background: rgba(246,246,242,0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px;
+  letter-spacing: -0.03em; color: var(--ink);
+}
+.nav-logo sup { color: var(--g); font-size: 10px; letter-spacing: 0; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--dim);
+  text-decoration: none; transition: color .15s;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; padding: 9px 18px; border-radius: 6px;
+  background: var(--ink); color: #fff; text-decoration: none; cursor: pointer;
+  border: none; transition: background .15s;
+}
+.nav-cta:hover { background: #2d2d2a; }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 100px 48px 80px;
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--g);
+  margin-bottom: 16px;
+}
+.hero-h1 {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 52px;
+  letter-spacing: -0.04em; line-height: 1.0; color: var(--ink);
+  margin-bottom: 20px;
+}
+.hero-h1 em { font-style: normal; color: var(--g); }
+.hero-sub {
+  font-size: 16px; color: var(--dim); line-height: 1.75; margin-bottom: 32px;
+  max-width: 440px;
+}
+.hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; padding: 12px 22px; border-radius: 7px;
+  background: var(--g); color: #fff; text-decoration: none; border: none;
+  cursor: pointer; transition: background .15s, transform .1s;
+}
+.btn-primary:hover { background: var(--gd); transform: translateY(-1px); }
+.btn-ghost {
+  font-size: 13px; font-weight: 500; color: var(--dim); text-decoration: none;
+  display: flex; align-items: center; gap: 6px;
+}
+.btn-ghost:hover { color: var(--ink); }
+
+.hero-right { position: relative; }
+.hero-card-stack { position: relative; }
+.outcome-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 100px; padding: 8px 14px 8px 10px;
+  font-size: 13px; font-weight: 500; color: var(--ink);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  white-space: nowrap;
+}
+.outcome-pill .dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--g);
+  flex-shrink: 0;
+}
+.pill-grid {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.pill-row { display: flex; gap: 10px; justify-content: flex-start; }
+.pill-row:nth-child(2) { padding-left: 24px; }
+.pill-row:nth-child(3) { padding-left: 8px; }
+
+/* ─── YEAR 1 STRIP ─── */
+.y1-strip {
+  background: var(--ink); margin: 0 48px;
+  border-radius: 14px; padding: 40px 48px;
+  display: flex; justify-content: space-between; align-items: center; gap: 40px;
+  max-width: 1004px; margin: 0 auto 80px; position: relative; overflow: hidden;
+}
+.y1-strip::before {
+  content: '';
+  position: absolute; top: -60px; right: 40px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(29,158,117,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.y1-badge {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: rgba(29,158,117,0.15); color: var(--g);
+  border: 1px solid rgba(29,158,117,0.3); padding: 4px 10px; border-radius: 4px;
+  margin-bottom: 12px; display: inline-block;
+}
+.y1-title {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px;
+  color: #fff; letter-spacing: -0.02em; margin-bottom: 8px;
+}
+.y1-sub { font-size: 14px; color: rgba(255,255,255,0.45); max-width: 360px; line-height: 1.6; }
+.y1-path {
+  display: flex; align-items: center; gap: 0; flex-shrink: 0;
+}
+.y1-node {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 12px 18px; text-align: center;
+}
+.y1-node-num {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--g);
+  letter-spacing: 0.08em; margin-bottom: 4px;
+}
+.y1-node-name { font-size: 13px; font-weight: 500; color: #fff; white-space: nowrap; }
+.y1-arrow {
+  font-size: 16px; color: rgba(255,255,255,0.2);
+  padding: 0 10px; flex-shrink: 0;
+}
+.y1-node.highlighted {
+  background: rgba(29,158,117,0.15); border-color: rgba(29,158,117,0.4);
+}
+.y1-node.highlighted .y1-node-name { color: var(--g); }
+
+/* ─── SECTION HEADER ─── */
+.section-header {
+  max-width: 1100px; margin: 0 auto; padding: 0 48px;
+  margin-bottom: 40px;
+}
+.section-header .eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--g); margin-bottom: 10px;
+}
+.section-header h2 {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 36px;
+  letter-spacing: -0.03em; color: var(--ink); line-height: 1.1;
+}
+.section-header p {
+  font-size: 15px; color: var(--dim); margin-top: 10px; max-width: 540px; line-height: 1.7;
+}
+
+/* ─── PACKAGES ─── */
+.packages-wrap { max-width: 1100px; margin: 0 auto; padding: 0 48px 100px; }
+
+/* ─── PACKAGE CARD ─── */
+.pkg {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 16px; overflow: hidden; margin-bottom: 24px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.pkg:hover { border-color: rgba(29,158,117,0.3); box-shadow: 0 8px 40px rgba(29,158,117,0.07); }
+.pkg.featured { border-color: var(--g); border-width: 1.5px; }
+
+.pkg-header {
+  padding: 36px 40px 32px;
+  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+.pkg-num {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--g); margin-bottom: 8px;
+}
+.pkg-name {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 26px;
+  letter-spacing: -0.03em; color: var(--ink); margin-bottom: 8px; line-height: 1.1;
+}
+.pkg-purpose { font-size: 14px; color: var(--dim); line-height: 1.6; max-width: 500px; }
+.pkg-price-block { text-align: right; flex-shrink: 0; }
+.pkg-from {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--faint);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px;
+}
+.pkg-price {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 28px;
+  color: var(--ink); letter-spacing: -0.03em; white-space: nowrap;
+}
+.pkg-price-range {
+  font-size: 12px; color: var(--dim); margin-top: 2px;
+}
+.pkg-timeline {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--g);
+  letter-spacing: 0.06em; margin-top: 8px;
+}
+.featured-badge {
+  display: inline-block; background: var(--g); color: #fff;
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.pkg-body {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+}
+.pkg-col {
+  padding: 28px 32px;
+  border-right: 1px solid var(--line);
+}
+.pkg-col:last-child { border-right: none; }
+.pkg-col-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint);
+  margin-bottom: 14px;
+}
+.del-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.del-item {
+  display: flex; align-items: flex-start; gap: 9px;
+  font-size: 13px; line-height: 1.5; color: var(--ink);
+}
+.del-check {
+  width: 16px; height: 16px; border-radius: 4px; background: var(--gl);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.del-check svg { width: 9px; height: 9px; }
+.del-plus {
+  width: 16px; height: 16px; border-radius: 4px; background: rgba(29,158,117,0.12);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+
+.outcome-list { display: flex; flex-direction: column; gap: 0; }
+.outcome-group { margin-bottom: 16px; }
+.outcome-group-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--g);
+  letter-spacing: 0.08em; margin-bottom: 6px;
+}
+.outcome-item {
+  font-size: 13px; color: var(--dim); padding: 5px 0;
+  border-bottom: 1px solid var(--line); line-height: 1.4;
+}
+.outcome-item:last-child { border-bottom: none; }
+.outcome-stat {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px;
+  color: var(--g); margin-bottom: 2px;
+}
+.outcome-stat-label { font-size: 12px; color: var(--dim); }
+.outcome-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.outcome-stat-block {
+  background: var(--bg); border-radius: 8px; padding: 14px;
+}
+
+.pkg-footer {
+  padding: 20px 32px;
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  background: var(--bg);
+}
+.pkg-footer-note { font-size: 12px; color: var(--dim); }
+.pkg-cta {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; padding: 10px 20px; border-radius: 6px;
+  cursor: pointer; border: none; transition: all .15s; white-space: nowrap; text-decoration: none;
+  display: inline-block;
+}
+.pkg-cta-ghost {
+  background: transparent; color: var(--g);
+  border: 1px solid rgba(29,158,117,0.4);
+}
+.pkg-cta-ghost:hover { background: var(--gl); }
+.pkg-cta-solid { background: var(--g); color: #fff; }
+.pkg-cta-solid:hover { background: var(--gd); }
+.pkg-cta-dark { background: var(--ink); color: #fff; }
+.pkg-cta-dark:hover { background: #2d2d2a; }
+
+/* ─── RETAINER CARD ─── */
+.retainer-card {
+  background: var(--ink); border-radius: 16px; overflow: hidden;
+  margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.06);
+}
+.retainer-header {
+  padding: 36px 40px 28px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start;
+}
+.retainer-num {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--g); margin-bottom: 8px;
+}
+.retainer-name {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 26px;
+  letter-spacing: -0.03em; color: #fff; margin-bottom: 8px; line-height: 1.1;
+}
+.retainer-purpose { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 500px; }
+.retainer-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--g);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; opacity: 0.7;
+}
+.retainer-badge {
+  display: inline-block; background: rgba(29,158,117,0.15);
+  border: 1px solid rgba(29,158,117,0.3); color: var(--g);
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.tiers-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+}
+.tier {
+  padding: 28px 32px; border-right: 1px solid rgba(255,255,255,0.07);
+  position: relative;
+}
+.tier:last-child { border-right: none; }
+.tier.tier-highlight {
+  background: rgba(29,158,117,0.08); border-right-color: rgba(29,158,117,0.2);
+}
+.tier-name {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px;
+  color: #fff; margin-bottom: 4px;
+}
+.tier-price {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 32px;
+  letter-spacing: -0.04em; color: #fff; margin-bottom: 2px;
+  display: flex; align-items: baseline; gap: 4px;
+}
+.tier-price-per { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.35); }
+.tier-tagline { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 18px; line-height: 1.5; }
+.tier-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.tier-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.4;
+}
+.tier-dot {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--g);
+  flex-shrink: 0; margin-top: 6px;
+}
+.tier-plus {
+  width: 5px; height: 5px; border-radius: 50%; background: rgba(29,158,117,0.4);
+  flex-shrink: 0; margin-top: 6px;
+}
+.tier-recommended {
+  position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+  background: var(--g); color: #fff; font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 12px; border-radius: 0 0 6px 6px;
+}
+.retainer-footer {
+  padding: 20px 32px; border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.retainer-footer-note { font-size: 12px; color: rgba(255,255,255,0.3); }
+
+/* ─── COMPARISON TABLE ─── */
+.compare-section { max-width: 1100px; margin: 0 auto; padding: 0 48px 100px; }
+.compare-table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+.compare-table th, .compare-table td {
+  padding: 14px 20px; text-align: left; font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+.compare-table thead th {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint);
+  background: var(--card); padding-top: 16px; padding-bottom: 16px;
+}
+.compare-table thead th:first-child { border-radius: 10px 0 0 0; }
+.compare-table thead th:last-child { border-radius: 0 10px 0 0; }
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table tbody tr:hover td { background: rgba(29,158,117,0.02); }
+.compare-table tbody td:first-child { font-weight: 500; }
+.compare-table tbody td { color: var(--dim); }
+.compare-table tbody td:first-child { color: var(--ink); }
+.compare-wrap {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+}
+.tick { color: var(--g); font-weight: 600; }
+.dash { color: var(--line2); }
+
+/* ─── IDEAL FOR ─── */
+.ideal-section { max-width: 1100px; margin: 0 auto; padding: 0 48px 80px; }
+.ideal-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 32px; }
+.ideal-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 24px; transition: border-color .15s;
+}
+.ideal-card:hover { border-color: var(--gm); }
+.ideal-icon { font-size: 22px; margin-bottom: 12px; }
+.ideal-industry {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 6px;
+}
+.ideal-role { font-size: 12px; color: var(--dim); margin-bottom: 14px; }
+.ideal-pains { display: flex; flex-direction: column; gap: 6px; }
+.ideal-pain {
+  font-size: 12px; color: var(--dim); display: flex; align-items: flex-start; gap: 8px;
+  padding: 6px 10px; background: var(--bg); border-radius: 6px; line-height: 1.4;
+}
+.ideal-pain::before { content: '→'; color: var(--g); flex-shrink: 0; font-size: 11px; }
+
+/* ─── FAQ ─── */
+.faq-section { max-width: 760px; margin: 0 auto; padding: 0 48px 100px; }
+.faq-item {
+  border-bottom: 1px solid var(--line); padding: 20px 0; cursor: pointer;
+}
+.faq-q {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px;
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+}
+.faq-icon { font-size: 18px; color: var(--g); flex-shrink: 0; transition: transform .2s; }
+.faq-a { font-size: 14px; color: var(--dim); line-height: 1.75; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s; padding-top: 0; }
+.faq-item.open .faq-a { max-height: 300px; padding-top: 12px; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* ─── CTA BAND ─── */
+.cta-band {
+  background: var(--g); padding: 80px 48px;
+  text-align: center;
+}
+.cta-band h2 {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 40px;
+  letter-spacing: -0.04em; color: #fff; margin-bottom: 12px; line-height: 1.1;
+}
+.cta-band p { font-size: 16px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
+.cta-band-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-white {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; padding: 14px 26px; border-radius: 7px;
+  background: #fff; color: var(--g); text-decoration: none; cursor: pointer;
+  border: none; transition: all .15s;
+}
+.btn-white:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.btn-outline-white {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; padding: 14px 26px; border-radius: 7px;
+  background: transparent; color: #fff; text-decoration: none; cursor: pointer;
+  border: 1.5px solid rgba(255,255,255,0.4); transition: all .15s;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--ink); padding: 40px 48px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+}
+.footer-logo {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: #fff;
+}
+.footer-logo sup { color: var(--g); }
+.footer-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 60px 20px 48px; gap: 40px; }
+  .hero-h1 { font-size: 38px; }
+  .y1-strip { padding: 28px 20px; flex-direction: column; gap: 24px; margin: 0 20px 60px; }
+  .y1-path { flex-wrap: wrap; justify-content: center; }
+  .packages-wrap, .compare-section, .ideal-section, .faq-section { padding: 0 20px 60px; }
+  .section-header { padding: 0 20px; }
+  .pkg-header { grid-template-columns: 1fr; }
+  .pkg-price-block { text-align: left; }
+  .pkg-body { grid-template-columns: 1fr; }
+  .pkg-col { border-right: none; border-bottom: 1px solid var(--line); }
+  .pkg-col:last-child { border-bottom: none; }
+  .tiers-grid { grid-template-columns: 1fr; }
+  .tier { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .tier:last-child { border-bottom: none; }
+  .ideal-grid { grid-template-columns: 1fr; }
+  .retainer-header { grid-template-columns: 1fr; }
+  .cta-band { padding: 60px 20px; }
+  .cta-band h2 { font-size: 30px; }
+  footer { flex-direction: column; align-items: flex-start; padding: 32px 20px; }
+  .outcome-stats-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">AutomEight<sup>™</sup></div>
+  <div class="nav-links">
+    <a href="#packages">Services</a>
+    <a href="#compare">Compare</a>
+    <a href="#ideal">Who We Help</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#audit" class="nav-cta">Book Free Audit →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">AutomEight™ — Services &amp; Pricing</div>
+    <h1 class="hero-h1">You don't buy<br><em>n8n.</em><br>You buy time<br>back.</h1>
+    <p class="hero-sub">Our clients don't care which tools we use. They care about the outcome — less admin, more capacity, better client experience, and a firm that can scale without adding headcount.</p>
+    <div class="hero-actions">
+      <a href="#audit" class="btn-primary">Book a Free Workflow Audit</a>
+      <a href="#packages" class="btn-ghost">View packages <span>↓</span></a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="pill-grid">
+      <div class="pill-row">
+        <div class="outcome-pill"><span class="dot"></span>Hours saved per week</div>
+        <div class="outcome-pill"><span class="dot"></span>Zero manual data entry</div>
+      </div>
+      <div class="pill-row">
+        <div class="outcome-pill"><span class="dot"></span>Faster client onboarding</div>
+        <div class="outcome-pill"><span class="dot"></span>Reduced admin cost</div>
+      </div>
+      <div class="pill-row">
+        <div class="outcome-pill"><span class="dot"></span>Scale without headcount</div>
+        <div class="outcome-pill"><span class="dot"></span>Better client experience</div>
+      </div>
+      <div class="pill-row" style="padding-left:0;">
+        <div class="outcome-pill"><span class="dot"></span>Operational clarity</div>
+        <div class="outcome-pill"><span class="dot"></span>Compounding ROI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YEAR 1 RECOMMENDED PATH -->
+<div style="max-width:1100px;margin:0 auto;padding:0 48px 48px;">
+  <div class="y1-strip">
+    <div>
+      <div class="y1-badge">Year 1 Recommended Path</div>
+      <div class="y1-title">The cleanest, most profitable model<br>for a growing firm.</div>
+      <div class="y1-sub">Start with an Assessment to see the opportunity. Build the system. Retain us to keep it running and improving. Simple.</div>
+    </div>
+    <div class="y1-path">
+      <div class="y1-node highlighted">
+        <div class="y1-node-num">01</div>
+        <div class="y1-node-name">Assessment</div>
+      </div>
+      <div class="y1-arrow">→</div>
+      <div class="y1-node highlighted">
+        <div class="y1-node-num">02</div>
+        <div class="y1-node-name">AI Operations</div>
+      </div>
+      <div class="y1-arrow">→</div>
+      <div class="y1-node highlighted">
+        <div class="y1-node-num">03</div>
+        <div class="y1-node-name">Managed™</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<div id="packages">
+  <div class="section-header">
+    <div class="eyebrow">Service Packages</div>
+    <h2>Five ways to work<br>with AutomEight™</h2>
+    <p>All packages are scoped to your firm's specific needs. Prices reflect the South African professional services market.</p>
+  </div>
+
+  <div class="packages-wrap">
+
+    <!-- PKG 1: ASSESSMENT -->
+    <div class="pkg">
+      <div class="pkg-header">
+        <div>
+          <div class="pkg-num">Package 01 · Entry Point</div>
+          <div class="pkg-name">Automation Opportunity<br>Assessment</div>
+          <div class="pkg-purpose">Identify where automation can create the biggest impact in your firm — before committing to a build. The sharpest first step.</div>
+        </div>
+        <div class="pkg-price-block">
+          <div class="pkg-from">Starting from</div>
+          <div class="pkg-price">R3,500</div>
+          <div class="pkg-price-range">Up to R10,000</div>
+          <div class="pkg-timeline">Timeline: 1 week</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-col">
+          <div class="pkg-col-label">What You Get</div>
+          <ul class="del-list">
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>60–90 min strategy session</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Business process review</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Workflow mapping document</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Bottleneck analysis</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Automation opportunity report</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Technology recommendations</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>ROI estimate</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>90-day automation roadmap</li>
+          </ul>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Ideal For</div>
+          <div class="outcome-list">
+            <div class="outcome-group">
+              <div style="font-size:13px;color:var(--dim);line-height:1.7;">Firms that know they need to change but don't know where to start.</div>
+              <br>
+              <div style="font-size:13px;color:var(--dim);line-height:1.7;">Owners and partners who want an objective, expert view of their operations before committing budget.</div>
+              <br>
+              <div style="font-size:13px;color:var(--dim);line-height:1.7;">Any recruitment agency, accounting firm, or law firm at any size.</div>
+            </div>
+          </div>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Typical Outcome</div>
+          <div class="outcome-stats-grid">
+            <div class="outcome-stat-block"><div class="outcome-stat">3–7</div><div class="outcome-stat-label">automation opportunities identified</div></div>
+            <div class="outcome-stat-block"><div class="outcome-stat">R50K+</div><div class="outcome-stat-label">typical annual ROI uncovered</div></div>
+          </div>
+          <div style="margin-top:14px;padding:12px 14px;background:var(--gl);border-radius:8px;">
+            <div style="font-size:12px;color:var(--gdp);line-height:1.6;"><strong>Assessment credit:</strong> The full cost of this package is credited toward any subsequent implementation package. You invest in clarity — not just a report.</div>
+          </div>
+        </div>
+      </div>
+      <div class="pkg-footer">
+        <div class="pkg-footer-note">Best first step for any firm. Assessment cost credited to implementation.</div>
+        <a href="#audit" class="pkg-cta pkg-cta-ghost">Book Assessment →</a>
+      </div>
+    </div>
+
+    <!-- PKG 2: WORKFLOW ACCELERATOR -->
+    <div class="pkg">
+      <div class="pkg-header">
+        <div>
+          <div class="pkg-num">Package 02 · Quick Wins</div>
+          <div class="pkg-name">Workflow Automation<br>Accelerator</div>
+          <div class="pkg-purpose">Eliminate your most painful manual tasks fast. Up to 3 automated workflows built, tested, and deployed in 2–4 weeks. Immediate, measurable relief.</div>
+        </div>
+        <div class="pkg-price-block">
+          <div class="pkg-from">Starting from</div>
+          <div class="pkg-price">R15,000</div>
+          <div class="pkg-price-range">Up to R35,000</div>
+          <div class="pkg-timeline">Timeline: 2–4 weeks</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-col">
+          <div class="pkg-col-label">What You Get</div>
+          <ul class="del-list">
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Discovery workshop</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Workflow architecture design</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Up to 3 automated workflows</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>CRM integration</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Email automation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Notification automation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Full testing</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Documentation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Team training session</li>
+          </ul>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Example Outcomes by Vertical</div>
+          <div class="outcome-group">
+            <div class="outcome-group-label">Recruitment</div>
+            <div class="outcome-item">Automated candidate screening &amp; tagging</div>
+            <div class="outcome-item">Interview scheduling workflow</div>
+            <div class="outcome-item">Candidate follow-up sequences</div>
+          </div>
+          <div class="outcome-group">
+            <div class="outcome-group-label">Accounting</div>
+            <div class="outcome-item">Document collection &amp; reminders</div>
+            <div class="outcome-item">Client onboarding sequence</div>
+            <div class="outcome-item">Tax deadline alert system</div>
+          </div>
+          <div class="outcome-group">
+            <div class="outcome-group-label">Legal</div>
+            <div class="outcome-item">Automated client intake workflow</div>
+            <div class="outcome-item">Matter tracking &amp; updates</div>
+            <div class="outcome-item">Document collection portal</div>
+          </div>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Expected Impact</div>
+          <div class="outcome-stats-grid">
+            <div class="outcome-stat-block"><div class="outcome-stat">8–15h</div><div class="outcome-stat-label">saved per week on targeted tasks</div></div>
+            <div class="outcome-stat-block"><div class="outcome-stat">3 wks</div><div class="outcome-stat-label">to full deployment and training</div></div>
+          </div>
+          <div style="margin-top:14px;padding:12px 14px;background:var(--bg);border-radius:8px;border:1px solid var(--line);">
+            <div style="font-size:12px;color:var(--dim);line-height:1.6;">Typical payback period: <strong style="color:var(--ink);">4–8 weeks</strong> based on billable hours reclaimed.</div>
+          </div>
+        </div>
+      </div>
+      <div class="pkg-footer">
+        <div class="pkg-footer-note">Best for firms wanting fast, tangible results in specific workflows.</div>
+        <a href="#audit" class="pkg-cta pkg-cta-ghost">Enquire →</a>
+      </div>
+    </div>
+
+    <!-- PKG 3: AI OPERATIONS — FEATURED -->
+    <div class="pkg featured">
+      <div class="pkg-header">
+        <div>
+          <div class="featured-badge">Year 1 Recommended</div>
+          <div class="pkg-num">Package 03 · Core Implementation</div>
+          <div class="pkg-name">AI Operations<br>System</div>
+          <div class="pkg-purpose">Intelligent workflows that don't just automate — they think. Combine the power of automation with AI to create operational systems that handle complexity, not just repetition.</div>
+        </div>
+        <div class="pkg-price-block">
+          <div class="pkg-from">Starting from</div>
+          <div class="pkg-price">R35,000</div>
+          <div class="pkg-price-range">Up to R75,000</div>
+          <div class="pkg-timeline">Timeline: 4–8 weeks</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-col">
+          <div class="pkg-col-label">Everything in Package 02, Plus</div>
+          <ul class="del-list">
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Everything in Package 02</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>AI-powered workflow logic</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>AI assistants (internal/client-facing)</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>AI document processing</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>AI summarisation</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>AI email drafting</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>AI knowledge base integration</li>
+            <li class="del-item"><div class="del-plus"><svg viewBox="0 0 10 10" fill="none"><path d="M5 2v6M2 5h6" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round"/></svg></div>Workflow operations dashboard</li>
+          </ul>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">AI Outcomes by Vertical</div>
+          <div class="outcome-group">
+            <div class="outcome-group-label">Recruitment</div>
+            <div class="outcome-item">AI candidate ranking &amp; shortlisting</div>
+            <div class="outcome-item">AI-generated outreach drafts</div>
+            <div class="outcome-item">Smart matching &amp; alerts</div>
+          </div>
+          <div class="outcome-group">
+            <div class="outcome-group-label">Accounting</div>
+            <div class="outcome-item">AI client query triage &amp; drafting</div>
+            <div class="outcome-item">Document summarisation</div>
+            <div class="outcome-item">Anomaly flagging in data</div>
+          </div>
+          <div class="outcome-group">
+            <div class="outcome-group-label">Legal</div>
+            <div class="outcome-item">AI intake analysis &amp; routing</div>
+            <div class="outcome-item">Contract review summaries</div>
+            <div class="outcome-item">Research &amp; precedent assistance</div>
+          </div>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Expected Impact</div>
+          <div class="outcome-stats-grid">
+            <div class="outcome-stat-block"><div class="outcome-stat">20–35h</div><div class="outcome-stat-label">saved per week across the team</div></div>
+            <div class="outcome-stat-block"><div class="outcome-stat">6 wks</div><div class="outcome-stat-label">avg. time to full deployment</div></div>
+          </div>
+          <div style="margin-top:12px;padding:12px 14px;background:var(--gl);border-radius:8px;border:1px solid rgba(29,158,117,0.2);">
+            <div style="font-size:12px;color:var(--gdp);line-height:1.6;">Most clients combine this package with Managed Automation™ for continuous improvement after launch.</div>
+          </div>
+        </div>
+      </div>
+      <div class="pkg-footer" style="background:rgba(29,158,117,0.04);">
+        <div class="pkg-footer-note">The recommended implementation package for Year 1 clients.</div>
+        <a href="#audit" class="pkg-cta pkg-cta-solid">Get Started →</a>
+      </div>
+    </div>
+
+    <!-- PKG 4: TRANSFORMATION -->
+    <div class="pkg">
+      <div class="pkg-header">
+        <div>
+          <div class="pkg-num">Package 04 · Full Transformation</div>
+          <div class="pkg-name">Business Systems<br>Transformation</div>
+          <div class="pkg-purpose">End-to-end operational redesign. For firms ready to restructure how the entire business runs — not just automate individual tasks, but architect a scalable operating system.</div>
+        </div>
+        <div class="pkg-price-block">
+          <div class="pkg-from">Starting from</div>
+          <div class="pkg-price">R80,000</div>
+          <div class="pkg-price-range">Up to R250,000+</div>
+          <div class="pkg-timeline">Timeline: 8–16 weeks</div>
+        </div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-col">
+          <div class="pkg-col-label">What You Get</div>
+          <ul class="del-list">
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Full process architecture design</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Multi-department automation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>CRM optimisation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Full AI implementation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>API integrations</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Reporting dashboards</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>SOP creation</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Team onboarding programme</li>
+            <li class="del-item"><div class="del-check"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Executive reporting framework</li>
+          </ul>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Scope of Change</div>
+          <div class="outcome-group">
+            <div class="outcome-item" style="padding:8px 0;">Every client-facing workflow mapped and automated</div>
+            <div class="outcome-item" style="padding:8px 0;">Every internal operational process reviewed and systematised</div>
+            <div class="outcome-item" style="padding:8px 0;">Full technology stack integrated and optimised</div>
+            <div class="outcome-item" style="padding:8px 0;">Leadership reporting and visibility systems built</div>
+            <div class="outcome-item" style="padding:8px 0;">Team trained, documented, and capable of self-management</div>
+          </div>
+        </div>
+        <div class="pkg-col">
+          <div class="pkg-col-label">Guaranteed Outcomes</div>
+          <div class="outcome-stats-grid">
+            <div class="outcome-stat-block"><div class="outcome-stat">50–80%</div><div class="outcome-stat-label">reduction in admin workload</div></div>
+            <div class="outcome-stat-block"><div class="outcome-stat">100%</div><div class="outcome-stat-label">process documentation</div></div>
+          </div>
+          <div style="margin-top:12px;font-size:12px;color:var(--dim);line-height:1.7;">
+            Improved team capacity, standardised delivery, real-time reporting visibility, and a firm that can grow without proportional headcount growth.
+          </div>
+        </div>
+      </div>
+      <div class="pkg-footer">
+        <div class="pkg-footer-note">For firms ready for comprehensive operational transformation.</div>
+        <a href="#audit" class="pkg-cta pkg-cta-ghost">Discuss Your Transformation →</a>
+      </div>
+    </div>
+
+    <!-- PKG 5: MANAGED RETAINER -->
+    <div class="retainer-card">
+      <div class="retainer-header">
+        <div>
+          <div class="retainer-badge">Year 1 Recommended · Recurring</div>
+          <div class="retainer-num">Package 05 · Monthly Retainer</div>
+          <div class="retainer-name">AutomEight<br>Managed Automation™</div>
+          <div class="retainer-purpose">Ongoing support, optimisation, and continuous improvement. Your automation systems don't just run — they compound. Every month, they get better.</div>
+        </div>
+        <div>
+          <div class="retainer-label">Monthly recurring</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#fff;letter-spacing:-0.03em;">From R5,000<span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.35);"> /month</span></div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:4px;">Three tiers. Cancel anytime.</div>
+        </div>
+      </div>
+      <div class="tiers-grid">
+        <div class="tier">
+          <div class="tier-name">Essential</div>
+          <div class="tier-price">R5,000<span class="tier-price-per">/mo</span></div>
+          <div class="tier-tagline">Keep your automations healthy and monitored.</div>
+          <ul class="tier-list">
+            <li class="tier-item"><span class="tier-dot"></span>System monitoring</li>
+            <li class="tier-item"><span class="tier-dot"></span>Bug fixes &amp; patches</li>
+            <li class="tier-item"><span class="tier-dot"></span>Monthly performance report</li>
+            <li class="tier-item"><span class="tier-dot"></span>Email support</li>
+          </ul>
+        </div>
+        <div class="tier tier-highlight">
+          <div class="tier-recommended">Recommended</div>
+          <div class="tier-name" style="color:#fff;padding-top:8px;">Growth</div>
+          <div class="tier-price">R12,000<span class="tier-price-per">/mo</span></div>
+          <div class="tier-tagline">Everything monitored, plus continuous improvement.</div>
+          <ul class="tier-list">
+            <li class="tier-item"><span class="tier-dot"></span>Everything in Essential</li>
+            <li class="tier-item"><span class="tier-plus"></span>Workflow optimisation</li>
+            <li class="tier-item"><span class="tier-plus"></span>New automation requests</li>
+            <li class="tier-item"><span class="tier-plus"></span>Monthly strategy call</li>
+            <li class="tier-item"><span class="tier-plus"></span>Priority support</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <div class="tier-name">Scale</div>
+          <div class="tier-price">R25,000<span class="tier-price-per">+/mo</span></div>
+          <div class="tier-tagline">A dedicated automation partner embedded in your operations.</div>
+          <ul class="tier-list">
+            <li class="tier-item"><span class="tier-dot"></span>Everything in Growth</li>
+            <li class="tier-item"><span class="tier-plus"></span>Dedicated automation partner</li>
+            <li class="tier-item"><span class="tier-plus"></span>Quarterly automation roadmap</li>
+            <li class="tier-item"><span class="tier-plus"></span>Advanced reporting</li>
+            <li class="tier-item"><span class="tier-plus"></span>Ongoing AI optimisation</li>
+            <li class="tier-item"><span class="tier-plus"></span>Unlimited improvements (in scope)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="retainer-footer">
+        <div class="retainer-footer-note">All retainers require a minimum 3-month initial term. Month-to-month thereafter.</div>
+        <a href="#audit" class="pkg-cta pkg-cta-dark">Discuss Managed Automation →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- COMPARISON TABLE -->
+<div id="compare" class="compare-section">
+  <div class="section-header" style="padding:0;margin-bottom:32px;">
+    <div class="eyebrow">Package Comparison</div>
+    <h2>Find the right package<br>for your firm</h2>
+  </div>
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width:22%;">Feature</th>
+          <th>Assessment</th>
+          <th>Accelerator</th>
+          <th style="background:rgba(29,158,117,0.04);">AI Operations</th>
+          <th>Transformation</th>
+          <th>Managed™</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Workflow audit &amp; mapping</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td><td class="dash">—</td></tr>
+        <tr><td>Automation build</td><td class="dash">—</td><td class="tick">✓ (3 workflows)</td><td class="tick">✓ (full scope)</td><td class="tick">✓ (enterprise)</td><td class="dash">—</td></tr>
+        <tr><td>CRM integration</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td><td class="dash">—</td></tr>
+        <tr><td>AI-powered workflows</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td><td class="dash">—</td></tr>
+        <tr><td>AI document processing</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td><td class="dash">—</td></tr>
+        <tr><td>Reporting dashboard</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+        <tr><td>SOP documentation</td><td class="dash">—</td><td class="tick">✓ (basic)</td><td class="tick">✓</td><td class="tick">✓ (full)</td><td class="dash">—</td></tr>
+        <tr><td>Team training</td><td class="dash">—</td><td class="tick">✓ (1 session)</td><td class="tick">✓</td><td class="tick">✓ (programme)</td><td class="dash">—</td></tr>
+        <tr><td>Ongoing support</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td></tr>
+        <tr><td>Continuous improvement</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓ (Growth+)</td></tr>
+        <tr><td>ROI estimate</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+        <tr><td>Starting price</td><td>R3,500</td><td>R15,000</td><td style="font-weight:500;color:var(--g);">R35,000</td><td>R80,000</td><td>R5,000/mo</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- IDEAL FOR -->
+<div id="ideal" class="ideal-section">
+  <div class="section-header" style="padding:0;margin-bottom:32px;">
+    <div class="eyebrow">Who We Serve</div>
+    <h2>Built specifically for<br>professional service firms</h2>
+    <p>Every system we build is informed by deep knowledge of how recruitment agencies, accounting firms, and law firms actually operate.</p>
+  </div>
+  <div class="ideal-grid">
+    <div class="ideal-card">
+      <div class="ideal-icon">🏢</div>
+      <div class="ideal-industry">Recruitment Agencies</div>
+      <div class="ideal-role">Owners · Operations Managers · Founders</div>
+      <div class="ideal-pains">
+        <div class="ideal-pain">Manual candidate follow-up eating consultant time</div>
+        <div class="ideal-pain">Data entry between ATS and CRM systems</div>
+        <div class="ideal-pain">Interview scheduling done via back-and-forth email</div>
+        <div class="ideal-pain">Growing team but not growing profit</div>
+        <div class="ideal-pain">Client reporting compiled manually each week</div>
+      </div>
+    </div>
+    <div class="ideal-card">
+      <div class="ideal-icon">📊</div>
+      <div class="ideal-industry">Accounting Firms</div>
+      <div class="ideal-role">Partners · Practice Managers · MDs</div>
+      <div class="ideal-pains">
+        <div class="ideal-pain">Tax season requiring overtime and scrambling</div>
+        <div class="ideal-pain">Qualified accountants spending time on admin</div>
+        <div class="ideal-pain">Invoice generation taking 30+ minutes per client</div>
+        <div class="ideal-pain">Document chasing via email indefinitely</div>
+        <div class="ideal-pain">No automated deadline monitoring across clients</div>
+      </div>
+    </div>
+    <div class="ideal-card">
+      <div class="ideal-icon">⚖️</div>
+      <div class="ideal-industry">Law Firms</div>
+      <div class="ideal-role">Partners · Practice Managers · Managing Directors</div>
+      <div class="ideal-pains">
+        <div class="ideal-pain">Client intake taking 5+ business days</div>
+        <div class="ideal-pain">Partners spending time on non-billable administration</div>
+        <div class="ideal-pain">Documents manually populated from templates</div>
+        <div class="ideal-pain">POPIA compliance managed via spreadsheet</div>
+        <div class="ideal-pain">Court deadlines tracked without automated alerts</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="faq">
+  <div class="section-header">
+    <div class="eyebrow">Common Questions</div>
+    <h2>What firms ask us<br>before they start</h2>
+  </div>
+  <div class="faq-section" style="padding-top:0;">
+    <div class="faq-item">
+      <div class="faq-q">Do we need to know anything about technology to work with you?<span class="faq-icon">+</span></div>
+      <div class="faq-a">No. You bring the operational knowledge of your firm — we bring the technical expertise. Our job is to translate your processes into systems, not to teach you how those systems work. You'll understand what they do and what they deliver. How they're built is our concern.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What happens to our existing tools and software?<span class="faq-icon">+</span></div>
+      <div class="faq-a">We work with what you have wherever possible. Our approach is always integration before replacement. We connect and automate your existing tools before recommending any changes. If a tool genuinely needs replacing for your goals, we'll tell you why and what it costs before you commit.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long before we start seeing results?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Most clients see measurable time savings within the first 1–2 weeks of deployment. For the Workflow Automation Accelerator, you're looking at 2–4 weeks to go live. For the AI Operations System, 4–8 weeks. We build in stages, so you see early wins before the full system is complete.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if our processes are too specialised or complex to automate?<span class="faq-icon">+</span></div>
+      <div class="faq-a">We hear this often. In our experience, firms that believe they're "too specialised" almost always have significant automatable work underneath the specialised layers. The Assessment package is designed specifically to explore this — you'll know for certain after one session, with no obligation to proceed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What tools do you use to build automations?<span class="faq-icon">+</span></div>
+      <div class="faq-a">We work across n8n, Make.com, GoHighLevel, Zapier, and custom API integrations — and we select the right tool for your specific needs and scale. We don't have a favourite; we have a methodology. The tool is always secondary to the outcome.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is the Assessment fee refunded if we proceed with an implementation?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes. The full cost of the Automation Opportunity Assessment is credited toward any subsequent implementation package. You're paying for clarity and a professional audit of your operations — and if you move forward, that investment applies directly to the build.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you work with firms outside South Africa?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes. While our primary market is South African professional service firms, we work remotely with firms across Africa and internationally. Our methodology translates across markets. Pricing may vary for international engagements.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What makes AutomEight different from a generic tech company or freelancer?<span class="faq-icon">+</span></div>
+      <div class="faq-a">We specialise exclusively in professional service firms — recruitment, accounting, and law. We understand your workflows, your compliance environment, and your client expectations before we start. A generalist builds what you ask for. We build what you actually need.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div id="audit" class="cta-band">
+  <h2>Start with a free<br>workflow audit.</h2>
+  <p>30 minutes. No pitch. No invoice. Just clarity on where your firm is losing time — and what you can do about it.</p>
+  <div class="cta-band-actions">
+    <a href="mailto:hello@automeight.com" class="btn-white">Book Your Free Audit →</a>
+    <a href="mailto:hello@automeight.com" class="btn-outline-white">hello@automeight.com</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">AutomEight<sup>™</sup></div>
+    <div class="footer-tag" style="margin-top:6px;">Built to Automate. Designed to Scale. · South Africa</div>
+  </div>
+  <div class="footer-tag">All prices in ZAR excl. VAT · © 2025 AutomEight™</div>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
